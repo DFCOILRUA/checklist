@@ -1,32 +1,63 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Love Checklists CLI
 
-Welcome,
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+A simple and intuitive CLI app to manage your daily tasks with ease. Keep track of your tasks, mark them as complete, and manage your productivity effectively.
 
 ## Reminders
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+- Ensure you have Python 3 installed on your system
+- Navigate to the directory containing the `run.py` file 
+- run the following command in your terminal: 'python3 run.py'
 
-## Creating the Heroku app
+## Features
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+### Current Functionality
 
-1. `heroku/python`
-2. `heroku/nodejs`
+- **Task Viewing**: A single consolidated location of all tasks, with a clear indication of those already completed and those still pending.
+- **Task Addition**: Add new tasks to the  list as needed.
+- **Task Completion**: Easily mark tasks as completed.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+### Potential Furture Enhancements
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+- Grouping of tasks for better organization. i.e. Health category, Logistics Category, Study Category and so on.
 
-Connect your GitHub repository and deploy as normal.
 
-## Constraints
+## Data Model
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+This app uses a simple list of dictionaries to manage each task, with each task being a dictionary containing task information. This is admittedly a lightweight approach, allowing for quick interactions and edits if needed.
 
----
+## Testing
 
-Happy coding!
+- All code passed and verified by running the code through a PEP8 linter with no errors reported.
+- Tested in my local terminal as well as the Heroku terminal.
+
+## Bugs
+
+### Solved Bugs
+
+During testing an error was encountered at line 63 the following error "line too long (86 > 79 characters)". To resolve this I shortened the enclosed string in the associated print statement to return "marked done"  instead of "marked as completed"
+
+### Remaining Bugs
+
+None
+
+### Validator Testing
+
+- Pep8: No errors were returned from https://pep8ci.herokuapp.com/#
+
+## Deployment
+
+This project app was deployed using the Code Institute's mock terminal for Heroku.
+
+- Steps for deployment
+    - Clone this repository.
+    - Create a new Heroku app.
+    - Set the build-packs to Python and NodeJS, with Python appearing on top and Node JS below.
+    - Link Heroku app to the repository
+    - Click 'Deploy'
+
+## Credits
+
+- Code Institie for the deployment terminal
+- https://www.jdoodle.com/python3-programming-online/ as a useful online IDE whilst encountering connectivity issues with GitPod.
+- Portfolio Project 3 Scope video for guidance on appropriate README.md file structure
+

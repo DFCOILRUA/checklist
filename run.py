@@ -60,7 +60,7 @@ def complete_task(todo_list):
         task_number = int(input("Enter the task number you've completed:\n"))
         if 1 <= task_number <= len(todo_list):
             todo_list[task_number - 1]["completed"] = True
-            print(f"Task '{todo_list[task_number - 1]['name']}' marked as completed.")
+            print(f"Task '{todo_list[task_number - 1]['name']}' marked done.")
         else:
             print("Invalid task number!")
     except ValueError:
